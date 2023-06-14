@@ -4,45 +4,363 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@600&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <style type="text/css" media="all">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.body {
+    width: min(100%, 800px);
+    margin: 0 auto;
+}
+
+.sec1 {
+    background-image: linear-gradient(#00000033, #00000033), url('./smile.jpg');
+    background-size: cover;
+    padding: 8rem 3rem;
+    display: flex;
+    color: #f3f3f3;
+    justify-content: left;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.sec1 div {
+    width: min(400px, 100%);
+}
+
+.sec1 div h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0;
+    margin: 3rem 0;
+}
+
+.sec1 div p {
+    margin: 3rem 0;
+    text-align: center;
+    color: #fbff07;
+    font-size: 1.5rem;
+}
+
+.sec2 {
+    padding: 3rem;
+    box-shadow: 0 0 5px #b3b3b3;
+}
+
+.sec2 p, .sec2 span {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #008100;
+}
+
+.sec2 h2 {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.sec2 ul {
+    margin: 0 auto;
+}
+
+.sec2 ul li {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    list-style: inside;
+}
+
+.sec3 {
+    margin: 3rem 0;
+}
+
+.sec3 h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.testimonials {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 4rem 0;
+}
+
+.disclaimer {
+   background: black;
+   color: #a9a9a9;
+}
+
+.testimonials div {
+    width: 47%;
+    margin: 2% 1.5%;
+}
+
+.testimonials img {
+    display: block;
+    width: 100%;
+}
+
+.video {
+   width: 100%;
+}
+
+.video iframe {
+   width: 100%;
+}
+
+.sec4 {
+    margin: 3rem 0;
+    background-color: #252525;
+    padding: 3rem;
+}
+
+.sec4 p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ff0303;
+    margin: 0 0 4rem 0;
+}
+
+.sec4 p span {
+    color: #7e7e7e;
+}
+
+.sec4 ul li {
+    font-size: 1rem;
+    margin: 1rem 0;
+    list-style: inside;
+    color: #b3b3b3;
+}
+
+.sec4 h1 {
+    color: #fbff07;
+    margin: 4rem 0;
+}
+
+.sec4 h2 {
+    color: #b3b3b3;
+}
+
+.sec5 {
+    padding: 4rem;
+    background-color: #d1d1d1;
+}
+
+.sec5 h1 {
+    color: #252525;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+}
+
+.sec5 ul li {
+    font-size: 1rem;
+    margin: 1.2rem 0;
+    list-style: inside;
+    line-height: 1.5rem;
+    color: #252525;
+}
+
+.sec5 ul li p {
+    padding: 1rem;
+    text-align: center;
+    background-color: #bdbbbb;
+    margin: 5px 0;
+    text-align: left;
+    border-radius: 7px;
+}
+
+.add1 {
+   text-align: center;
+   margin: 4rem 0;
+   padding: 2rem 1.2rem;
+}
+
+.sec6 {
+    margin: 5rem 0;
+}
+
+.sec6 h3 {
+    text-align: left;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: #1fbe1c;
+    display: block;
+    width: min(90%, 600px);
+    border-radius: 7px;
+    margin: 1rem auto;
+    text-align: center;
+    box-shadow: 0 5px 5px #7e7e7e;
+    padding: 1rem 0;
+}
+
+a h2 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+a p {
+    color: black;
+}
+
+#lastvideo {
+    background: none;
+    text-decoration: underline;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+    color: blue;
+}
+
+.showup {
+    display: none;
+}
+
+.showmore {
+    padding: 3px 5px;
+    color: #ececec;
+    display: block;
+    width: auto;
+    background-color: #525252;
+    font-weight: 600;
+    border-radius: 2px;
+    border: none;
+}
+
+@media only screen and (max-width: 680px) {
+    .sec1 {
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .sec1 {
+        background-position: center;
+        justify-content: center;
+        padding: 8rem 1rem;
+    }
+
+    .sec1 div h3 {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
+    
+    .sec1 div p {
+        margin: 1.2rem 0;
+        font-size: 15px;
+    }
+
+    .sec2 {
+        padding: 3rem 1rem;
+    }
+
+    .sec2 p, .sec2 span {
+        font-size: 1.5rem;
+    }
+
+    .sec2 ul li {
+        font-size: 1rem;
+    }
+
+    .testimonials {
+        flex-flow: column wrap;
+        margin: 3rem 0;
+    }
+
+    .testimonials div {
+        width: 95%;
+        margin: 2rem 1.5%;
+    }
+
+    .sec4 {
+        padding: 2rem 1rem;
+    }
+
+    #sec4btn {
+        margin: 2rem auto;
+        display: block;
+    }
+
+    .sec5 {
+        padding: 3rem 0.6rem;
+    }
+
+    mark {
+        padding: 0;
+    }
+}
+    </style>
     <title>Affiliate Income Pilot</title>
 </head>
 <body>
     <div class="sec1">
         <div>
-            <h3>Get started on your Affiliate Marketing Journey</h3>
-            <p>at N30,000 before it increases to N40,000</p>
+            <h3>Discover a profitable business that changed the life of a lady from an NYSC corp to a multi-millionaire</h3>
+            
         </div>
     </div>
     <div class="body">
-        <div class="sec2">
-            <p>
-                the important things you need to do to start making money in dollars
-                <span> by selling other peoples products as a digitstem affiliate.</span>
-            </p>     
-            <ul>
-                <li>
-                    a smartphone, tablet or computer 
-                </li>
-                <li>
-                    a good internet connection
-                </li>
-                <li>
-                    the willingness to learn and practice what you learn
-                </li>
-                <li>
-                    a sum of N30,000 to get a 1 year free account and the (Affiliate Income Pilot) AIP course
-                    <mark>NOTE : this is currently a discount price it goes up to N40,000 in 2 days</mark>
-                </li>
-            </ul>
-        </div>
+ 
         <div class="sec3">
             <h1 id="intro">
-                Testimonials from young Nigerians who have made money with affiliate marketing
+                she is a graduate of University of ilorin served in ibadan.
+                She was suffering until she stumbled upon affiliate marketing.
             </h1>
+            <div class="testimonials">
+                <div>
+                    <img src="./joy1.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy2.jpg" alt="testimonials">
+                </div>
+                                <div>
+                    <img src="./joy3.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy4.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy5.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy6.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy7.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy8.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy9.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./joy10.jpg" alt="testimonials">
+                </div>
+            </div>
+    
+            <a href="https://tinyurl.com/Aip-leads">
+                <h2>learn more</h2>
+                <p>click to learn more</p>
+            </a>
+            
+            <h2 style="text-align: center; margin-top: 4rem">Results from students</h2>
             <div class="testimonials">
                 <div>
                     <img src="./img1.jpg" alt="testimonials">
@@ -53,13 +371,6 @@
                 <div>
                     <img src="./img3.jpg" alt="testimonials">
                 </div>
-            </div>
-    
-            <a href="https://tinyurl.com/Aip-leads">
-                <h2>pay now</h2>
-                <p>price increases to N40,000 in 2 days</p>
-            </a>
-            <div class="testimonials">
                 <div>
                     <img src="./img4.jpg" alt="testimonials">
                 </div>
@@ -69,125 +380,107 @@
                 <div>
                     <img src="./img6.jpg" alt="testimonials">
                 </div>
+                
+            </div>
+            <div class="add1">
+               <h3>What happened ?</h3>
+               <p>
+                
+She came across A Simple Income System that made her the first 8 Figures Of her life. After she went through all the trainings. She mastered the art of selling that won her various sales challenge including all expenses-paid trip to Egypt, Dubai and Qatar
+               </p>
+               <p>
+                   Dear Friend,
+
+Follow who know road
+
+My mentor Chiamaka Joy Agbim, has quietly built a fortune Online with this business model I'm talking about and now, she want to raise more Online Millionaires....
+
+It doesn't really matter where you are coming from....
+
+IF SHE CAN GO FROM STRUGGLING UNDERGRADUATE TO A CONSISTENT 8 FIGURES EARNER FROM THE COMFORT OF HER HOME...
+
+YOU CAN DO THIS TOO !!!
+
+She has recorded a video where she will be showing you how to start this simple EVER-GREEN BUSINESS MODEL, with little capital and how you can start making money weekly from it.
+               </p>
+            </div>
+            <div class="video">
+               <p>
+                  Watch this Free webinar
+               </p>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/Cm_FdH_shaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <a href="https://tinyurl.com/Aip-leads">
-                <h2>pay now</h2>
-                <p>price increases to N40,000 in 2 days</p>
+                <h2>learn more</h2>
+                <p>click to learn more</p>
             </a>
         </div> 
         <div class="sec4">
             <p>
-                Here's What you will get as you enroll for the ULTIMATE SALES MACHINE COURSE
-                <span>today!!!</span>
+                This business will work for you if :
             </p>    
             <div>
                 <ul>
-                    <li>The 7 figure mindset to build a profitable business that will change your life</li>
-                    <li>A step-by-step framework to your first sale in less than 21 days</li>
-                    <li>The easiest way to make your clients follow you and buy from you without forcing them</li>
-                    <li>How to generate hot leads on twitter ,facebook and WhatSapp like a magician</li>
-                    <li>Free lead magnet to give out to your leads</li>
-                    <li>How to build a website landing page</li>
-                    <li>done for you copy headlines for copy and content</li>
-                    <li>how to pick a hot product that sells like crazy</li>
-                    <li>The SECRET FORMULA to handle any prospect objections</li>
-                    <li>how to run ads on facebook and instagram and make thousands of dollars in the process</li>
-                    <li>EXCLUSIVE : The secret to generate surefire content for your business in less than 5 minuites</li>
-                    <li>A FREE digitstem one year account</li>
-                    <li>7 figure support group where you can ask all your questions</li>
-                    <li>how to start a youtube channel and monetize it in 2 months</li>
+                    <li
+                    >You have little to no experience about selling online.</li>
+                    <li>You don't have a laptop</li>
+                    <li>You are still a student.</li>
+                    <li>You are new in the online space and you don't know how the internet works</li>
+                    <li>You have little capital to start</li>
+                    
                 </ul>
-                <div>
-                    <h1>
-                        but wait ! that's not all
-                    </h1>
-                    <h2>if you take action now you will also get my special bonuses for FREE</h2>
-                    <ul>
-                        <p>register now and get access to my : </p>
-                        <li>My special AIP training that will help you make your first $100 in 7 days of implementation(which costs $25 or N11,200)</li>
-                        <li>My special mentorship that will guide you to start selling like a pro(costs $30 or N13,400)</li>
-                        <li>My organic traffick hack ($15 or N6,700)</li>
-                        <li>My SECRET FORMULA to make your clients empty their pockets to you($50 or N22,300)</li>
-                    </ul>
-                    <mark>register now and get my bonuses for FREE</mark>
-                    <a id="sec4btn" href="https://wa.link/qbskw0">
-                        get started
-                    </a>
-                </div>
+              
         </div>
      </div>
-    <div class="sec5">
-        <h1>frequently asked questions</h1>
-        <ul>
-            <li>
-                will i be paying any other money after the N20,000 to start earning on digitstem?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : no you won't be paying any other fees to start earning on digitstem</p>
-            </li>
-            <li>
-                is affiliate marketing a referral business?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : no affiliate marketing is not a refferal business . all you do is sell and earn when somebody buys
-                    using your affiliate link.
-                </p>
-            </li>
-            <li>
-                how soon can I start earning after Registration ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : you will start earning within your first 30 days of implementing everything you learn in the course</p>
-            </li>
-            <li>
-                can i start with my phone ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : yes. infact 90% of affiliate marketers use their phones to do the business.</p>
-            </li>
-            <li>
-                How do i withdraw my money (commission) ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : It is very easy all you need to do is place your withdrawal on digitstem then you get paid.</p>
-            </li>
-            <li>
-                What is the AFFILIATE INCOME PILOT COURSE ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : this is a course that will teach you how you can make your first $1000 within 
-                your first 30 days of implementation. you will get access to this course when you register on digitstem </p>
-            </li>
-            <li>
-                Do i need to be experienced in the online space before I get Started ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : no. you don't need any prior experience to get started. you can make your first sale as a newbie
-                as soon as you've gone through the course.
-                </p>
-            </li>
-            <li>
-                I have a 9 - 5 job. hope this won't affect my job ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : Definitely not . it's not time consuming . you just have to dedicate at least 2 hours daily to the business</p>
-            </li>
-            <li>
-                will I get access to a support platform after getting the program ?
-                <button class="showmore">Answer</button><br>
-                <p class="showup"> <bold>Answer</bold> : yes. you will get access to a support group that is always ready to give you answers to all your 
-                    questions
-                </p>
-            </li>
-        </ul>
-    </div>  
+     
+     <div class="sec3">
+            <h1 id="intro">
+               testimonials from students
+            </h1>
+            <div class="testimonials">
+                <div>
+                    <img src="./img7.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img8.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img9.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img10.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img11.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img12.jpg" alt="testimonials">
+                </div>
+                
+            </div>
     </div>
+    </div>
+    <div class="add1">
+       
+In this Free Video, Joy would be showing you the strategy she has been using to make at least ₦500,000 weekly from this business model.
 
-    <script>
-        const sec5 = document.querySelector('.sec5');
+This Video is only for serious minded persons who are ready to take action instantly.
 
-        sec5.onclick = (e) => {
-            showAnswer(e);
-        }
+So, don't miss out
 
-        function showAnswer(e) {
-            if (e.target.matches('.showmore')) {
-            e.target.nextElementSibling.nextElementSibling.classList.toggle('showup');
-            }
-        }
-    </script>
+Click On The Link Below To Get Access To The video before the it is taken down
+    </div>
+      <a href="https://tinyurl.com/Aip-leads">
+
+                <h2>learn more</h2>
+
+                <p>click to learn more</p>
+            </a>
+    <div class="add1 disclaimer">
+      This Site Is Not A Part Of The Facebook Website Or Facebook Inc. Additionally, This Site Is Not Endorsed By Facebook In Any Way. FACEBOOK Is A Trademark Of FACEBOOK, Inc.
+
+© 2023 All Right Reserved Herit digitals
+    </div>
 </body>
 </html>
